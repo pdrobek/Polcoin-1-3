@@ -1,1 +1,1 @@
-﻿Polcoin based by idea off local currency --> polcoin.org
+﻿Polcoin based by idea off local currency --> polcoin.eu
