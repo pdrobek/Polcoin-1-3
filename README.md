@@ -5,10 +5,15 @@ Main developer: wojenny&pdrobek
 
 
 Algorithm : SHA256 
+
 Block Rate : 60 second (dynamic) 
+
 Value of block: 50 PLC 
+
 Block halving rate: 2100000 
+
 Maximum Coins: 210.000.000 
+
 Port : 9338
  
 
