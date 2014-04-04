@@ -1,12 +1,25 @@
 Polcoin based by idea off local currency --> polcoin.eu
+
+
 Main developer: wojenny&pdrobek
 
-Algorithm : SHA256 
+
+
+
+
+Algorithm : SHA256
+
 Block Rate : 60 second (dynamic) 
+
 Value of block: 50 PLC 
+
 Block halving rate: 2100000 
+
 Maximum Coins: 210.000.000 
+
 Port : 9338
+
+
 
 
 We believe that as PLN (Polish złoty) can live in the shadow of EUR (euro), polcoin may exist in the shadow of Bitcoin. 
