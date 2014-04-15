@@ -1,4 +1,4 @@
-Polcoin 1.0 
+Polcoin 1.0.0
 ====================
 
 Copyright (c) 2014 Polcoin Developers
@@ -29,8 +29,7 @@ Unpack the files into a directory and run:
 - bin/64/bitcoin-qt (GUI, 64-bit)
 - bin/64/polcoind (headless, 64-bit)
 
-See the documentation at the [Bitcoin Wiki](https://en.bitcoin.it/wiki/Main_Page)
-for help and more information.
+Polcoin.eu for help and more information.
 
 
 Other Pages
