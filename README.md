@@ -6,7 +6,6 @@ Main developer: wojenny&pdrobek
 
 
 
-
 Algorithm : SHA256
 
 Block Rate : 60 second (dynamic) 
