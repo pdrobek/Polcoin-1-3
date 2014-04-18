@@ -1,7 +1,6 @@
 ![Polcoin](http://uploads.webflow.com/52d95fe4cf2c57b94e0015ab/5350f2f1095f7e21470004cc_polcoin_400_400.png)
 
 Polcoin based by idea off local currency --> polcoin.eu
-
 Main developer: wojenny&pdrobek
 
 
@@ -31,6 +30,9 @@ Make quick and free of charge payments all over the world!
 If you have any trouble write on the https://forum.polmine.pl/index.php?topic=4204.msg44840#msg44840
 
 
+
+Polcoin is released under the terms of the MIT license.
+For more information or see http://opensource.org/licenses/MIT.
 
 
 Bitcoin donations : 16UV3qBZKtP4WhbJdu2D9QZkD7UtgbK2r7
