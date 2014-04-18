@@ -1,4 +1,4 @@
-[img]http://uploads.webflow.com/52d95fe4cf2c57b94e0015ab/5350f2f1095f7e21470004cc_polcoin_400_400.png[/img]
+[img] http://uploads.webflow.com/52d95fe4cf2c57b94e0015ab/5350f2f1095f7e21470004cc_polcoin_400_400.png [/img]
 
 Polcoin based by idea off local currency --> polcoin.eu
 
