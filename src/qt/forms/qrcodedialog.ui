@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>340</width>
-    <height>530</height>
+    <height>543</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -70,7 +70,7 @@
          <bool>true</bool>
         </property>
         <property name="text">
-         <string>Request Payment</string>
+         <string>Zarządaj płatności</string>
         </property>
        </widget>
       </item>
@@ -82,7 +82,7 @@
         <item row="1" column="0">
          <widget class="QLabel" name="lblLabel">
           <property name="text">
-           <string>Label:</string>
+           <string>Opis:</string>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -101,7 +101,7 @@
         <item row="2" column="0">
          <widget class="QLabel" name="lblMessage">
           <property name="text">
-           <string>Message:</string>
+           <string>Wiadomość:</string>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -126,7 +126,7 @@
            </sizepolicy>
           </property>
           <property name="text">
-           <string>Amount:</string>
+           <string>Saldo:</string>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>
@@ -172,7 +172,7 @@
         <item>
          <widget class="QPushButton" name="btnSaveAs">
           <property name="text">
-           <string>&amp;Save As...</string>
+           <string>&amp;Zapisz jako</string>
           </property>
          </widget>
         </item>
@@ -188,6 +188,7 @@
    <class>BitcoinAmountField</class>
    <extends>QSpinBox</extends>
    <header>bitcoinamountfield.h</header>
+   <container>1</container>
   </customwidget>
  </customwidgets>
  <resources/>

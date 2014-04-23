@@ -27,13 +27,13 @@
      </property>
      <widget class="QWidget" name="tabMain">
       <attribute name="title">
-       <string>&amp;Main</string>
+       <string>&amp;Główne</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_Main">
        <item>
         <widget class="QLabel" name="transactionFeeInfoLabel">
          <property name="text">
-          <string>Optional transaction fee per kB that helps make sure your transactions are processed quickly. Most transactions are 1 kB.</string>
+          <string>Opcjonalna opłata transakcyjna za każdy kB, która zapewni Ci odpowiedni priorytet transakcji. Większość transakcji posiada rozmiar 1kB.</string>
          </property>
          <property name="textFormat">
           <enum>Qt::PlainText</enum>
@@ -48,7 +48,7 @@
          <item>
           <widget class="QLabel" name="transactionFeeLabel">
            <property name="text">
-            <string>Pay transaction &amp;fee</string>
+            <string>Opłata transakcyjna</string>
            </property>
            <property name="textFormat">
             <enum>Qt::PlainText</enum>
@@ -82,7 +82,7 @@
           <string>Automatically start Bitcoin after logging in to the system.</string>
          </property>
          <property name="text">
-          <string>&amp;Start Bitcoin on system login</string>
+          <string>&amp;Uruchom klienta polcoind wraz ze startem systemu</string>
          </property>
         </widget>
        </item>
@@ -120,7 +120,7 @@
             <string>Reset all client options to default.</string>
            </property>
            <property name="text">
-            <string>&amp;Reset Options</string>
+            <string>&amp;Przywróć ustawienia domyślne</string>
            </property>
            <property name="autoDefault">
             <bool>false</bool>
@@ -133,7 +133,7 @@
      </widget>
      <widget class="QWidget" name="tabNetwork">
       <attribute name="title">
-       <string>&amp;Network</string>
+       <string>&amp;Sieć PLC</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_Network">
        <item>
@@ -142,7 +142,7 @@
           <string>Automatically open the Bitcoin client port on the router. This only works when your router supports UPnP and it is enabled.</string>
          </property>
          <property name="text">
-          <string>Map port using &amp;UPnP</string>
+          <string>Mapuj porty z wykorzystaniem &amp;UPnP</string>
          </property>
         </widget>
        </item>
@@ -152,7 +152,7 @@
           <string>Connect to the Bitcoin network through a SOCKS proxy (e.g. when connecting through Tor).</string>
          </property>
          <property name="text">
-          <string>&amp;Connect through SOCKS proxy:</string>
+          <string>&amp;Połącz przez proxy SOCKS</string>
          </property>
         </widget>
        </item>
@@ -213,7 +213,7 @@
          <item>
           <widget class="QLabel" name="socksVersionLabel">
            <property name="text">
-            <string>SOCKS &amp;Version:</string>
+            <string>Wersja SOCKS</string>
            </property>
            <property name="textFormat">
             <enum>Qt::PlainText</enum>
@@ -262,7 +262,7 @@
      </widget>
      <widget class="QWidget" name="tabWindow">
       <attribute name="title">
-       <string>&amp;Window</string>
+       <string>&amp;Właściwości okna</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_Window">
        <item>
@@ -271,7 +271,7 @@
           <string>Show only a tray icon after minimizing the window.</string>
          </property>
          <property name="text">
-          <string>&amp;Minimize to the tray instead of the taskbar</string>
+          <string>&amp;Zminimalizuj do tacki systemowej</string>
          </property>
         </widget>
        </item>
@@ -281,7 +281,7 @@
           <string>Minimize instead of exit the application when the window is closed. When this option is enabled, the application will be closed only after selecting Quit in the menu.</string>
          </property>
          <property name="text">
-          <string>M&amp;inimize on close</string>
+          <string>&amp;Zminimalizuj przy zamykaniu</string>
          </property>
         </widget>
        </item>
@@ -302,7 +302,7 @@
      </widget>
      <widget class="QWidget" name="tabDisplay">
       <attribute name="title">
-       <string>&amp;Display</string>
+       <string>&amp;Właściwości wyświetlania</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_Display">
        <item>
@@ -310,7 +310,7 @@
          <item>
           <widget class="QLabel" name="langLabel">
            <property name="text">
-            <string>User Interface &amp;language:</string>
+            <string>Domyślny język interfejsu</string>
            </property>
            <property name="textFormat">
             <enum>Qt::PlainText</enum>
@@ -334,7 +334,7 @@
          <item>
           <widget class="QLabel" name="unitLabel">
            <property name="text">
-            <string>&amp;Unit to show amounts in:</string>
+            <string>&amp;Jednostki wyświetlania</string>
            </property>
            <property name="textFormat">
             <enum>Qt::PlainText</enum>
@@ -359,7 +359,7 @@
           <string>Whether to show Bitcoin addresses in the transaction list or not.</string>
          </property>
          <property name="text">
-          <string>&amp;Display addresses in transaction list</string>
+          <string>&amp;Pokazuj adresy na liście transakcji</string>
          </property>
         </widget>
        </item>
@@ -437,7 +437,7 @@
      <item>
       <widget class="QPushButton" name="cancelButton">
        <property name="text">
-        <string>&amp;Cancel</string>
+        <string>&amp;Anuluj</string>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -447,7 +447,7 @@
      <item>
       <widget class="QPushButton" name="applyButton">
        <property name="text">
-        <string>&amp;Apply</string>
+        <string>&amp;Zastosuj</string>
        </property>
        <property name="autoDefault">
         <bool>false</bool>
@@ -463,6 +463,7 @@
    <class>BitcoinAmountField</class>
    <extends>QSpinBox</extends>
    <header>bitcoinamountfield.h</header>
+   <container>1</container>
   </customwidget>
   <customwidget>
    <class>QValueComboBox</class>

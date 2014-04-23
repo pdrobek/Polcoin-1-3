@@ -24,8 +24,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>666</width>
-        <height>165</height>
+        <width>664</width>
+        <height>154</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -64,7 +64,7 @@
         <string>Send to multiple recipients at once</string>
        </property>
        <property name="text">
-        <string>Add &amp;Recipient</string>
+        <string>Dodaj odbiorcę</string>
        </property>
        <property name="icon">
         <iconset resource="../bitcoin.qrc">
@@ -87,7 +87,7 @@
         <string>Remove all transaction fields</string>
        </property>
        <property name="text">
-        <string>Clear &amp;All</string>
+        <string>Wyczyść wszystko</string>
        </property>
        <property name="icon">
         <iconset resource="../bitcoin.qrc">
@@ -109,7 +109,7 @@
        <item>
         <widget class="QLabel" name="label">
          <property name="text">
-          <string>Balance:</string>
+          <string>Saldo:</string>
          </property>
         </widget>
        </item>
@@ -119,7 +119,7 @@
           <cursorShape>IBeamCursor</cursorShape>
          </property>
          <property name="text">
-          <string>123.456 PLC</string>
+          <string>0 PLC</string>
          </property>
          <property name="textInteractionFlags">
           <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
@@ -153,7 +153,7 @@
         <string>Confirm the send action</string>
        </property>
        <property name="text">
-        <string>S&amp;end</string>
+        <string>Wyślij</string>
        </property>
        <property name="icon">
         <iconset resource="../bitcoin.qrc">

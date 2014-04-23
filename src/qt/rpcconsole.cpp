@@ -263,7 +263,6 @@ void RPCConsole::setClientModel(ClientModel *model)
         ui->startupTime->setText(model->formatClientStartupTime());
 
         setNumConnections(model->getNumConnections());
-        ui->isTestNet->setChecked(model->isTestNet());
     }
 }
 

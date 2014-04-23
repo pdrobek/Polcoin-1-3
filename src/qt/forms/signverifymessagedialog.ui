@@ -20,17 +20,17 @@
    <item>
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tabSignMessage">
       <attribute name="title">
-       <string>&amp;Sign Message</string>
+       <string>&amp;Podpisz wiadomość</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_SM">
        <item>
         <widget class="QLabel" name="infoLabel_SM">
          <property name="text">
-          <string>You can sign messages with your addresses to prove you own them. Be careful not to sign anything vague, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</string>
+          <string>Możesz podpisać wiadomość za pomocą swojego adresu PLC aby udowodnić, że jesteś jej autorem. Nie podpisuj wiadomości co do których masz wątpliwości dotyczące ich pochodzenia.</string>
          </property>
          <property name="textFormat">
           <enum>Qt::PlainText</enum>
@@ -107,7 +107,7 @@
        <item>
         <widget class="QLabel" name="signatureLabel_SM">
          <property name="text">
-          <string>Signature</string>
+          <string>Sygnatura</string>
          </property>
          <property name="textFormat">
           <enum>Qt::PlainText</enum>
@@ -158,7 +158,7 @@
             <string>Sign the message to prove you own this Bitcoin address</string>
            </property>
            <property name="text">
-            <string>Sign &amp;Message</string>
+            <string>Podpisz wiadomość</string>
            </property>
            <property name="icon">
             <iconset resource="../bitcoin.qrc">
@@ -175,7 +175,7 @@
             <string>Reset all sign message fields</string>
            </property>
            <property name="text">
-            <string>Clear &amp;All</string>
+            <string>Wyczyść wszystko</string>
            </property>
            <property name="icon">
             <iconset resource="../bitcoin.qrc">
@@ -234,13 +234,13 @@
      </widget>
      <widget class="QWidget" name="tabVerifyMessage">
       <attribute name="title">
-       <string>&amp;Verify Message</string>
+       <string>&amp;Zweryfikuj wiadomość</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_VM">
        <item>
         <widget class="QLabel" name="infoLabel_VM">
          <property name="text">
-          <string>Enter the signing address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack.</string>
+          <string>Wklej adres za pomocą którego była podpisana poniższa wiadomość (upewnij się że wszystko zostało wklejone, wliczając w to symbole nowych linii, spacje, tabulacje itd).</string>
          </property>
          <property name="textFormat">
           <enum>Qt::PlainText</enum>
@@ -304,7 +304,7 @@
             <string>Verify the message to ensure it was signed with the specified Bitcoin address</string>
            </property>
            <property name="text">
-            <string>Verify &amp;Message</string>
+            <string>Zweryfikuj wiadomość</string>
            </property>
            <property name="icon">
             <iconset resource="../bitcoin.qrc">
@@ -321,7 +321,7 @@
             <string>Reset all verify message fields</string>
            </property>
            <property name="text">
-            <string>Clear &amp;All</string>
+            <string>Wyczyść wszystko</string>
            </property>
            <property name="icon">
             <iconset resource="../bitcoin.qrc">

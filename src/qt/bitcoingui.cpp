@@ -67,7 +67,7 @@ BitcoinGUI::BitcoinGUI(QWidget *parent) :
     prevBlocks(0)
 {
     restoreWindowGeometry();
-    setWindowTitle(tr("Polcoin") + " - " + tr("Wallet"));
+    setWindowTitle(tr("Polcoin") + " - " + tr("Portfel"));
 #ifndef Q_OS_MAC
     QApplication::setWindowIcon(QIcon(":icons/polcoin"));
     setWindowIcon(QIcon(":icons/polcoin"));
@@ -161,36 +161,36 @@ void BitcoinGUI::createActions()
 {
     QActionGroup *tabGroup = new QActionGroup(this);
 
-    overviewAction = new QAction(QIcon(":/icons/overview"), tr("&Overview"), this);
-    overviewAction->setStatusTip(tr("Show general overview of wallet"));
+    overviewAction = new QAction(QIcon(":/icons/overview"), tr("&Status portfela"), this);
+    overviewAction->setStatusTip(tr("Pokazuje statystyki portfela"));
     overviewAction->setToolTip(overviewAction->statusTip());
     overviewAction->setCheckable(true);
     overviewAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_1));
     tabGroup->addAction(overviewAction);
 
-    sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Send"), this);
-    sendCoinsAction->setStatusTip(tr("Send coins to a Polcoin address"));
+    sendCoinsAction = new QAction(QIcon(":/icons/send"), tr("&Wyślij monety"), this);
+    sendCoinsAction->setStatusTip(tr("Wysyła monety PLC pod wskazany adres"));
     sendCoinsAction->setToolTip(sendCoinsAction->statusTip());
     sendCoinsAction->setCheckable(true);
     sendCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_2));
     tabGroup->addAction(sendCoinsAction);
 
-    receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Receive"), this);
-    receiveCoinsAction->setStatusTip(tr("Show the list of addresses for receiving payments"));
+    receiveCoinsAction = new QAction(QIcon(":/icons/receiving_addresses"), tr("&Odbierz"), this);
+    receiveCoinsAction->setStatusTip(tr("Pokazuje adresy PLC służące do odbierania płatności PLC"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
     tabGroup->addAction(receiveCoinsAction);
 
-    historyAction = new QAction(QIcon(":/icons/history"), tr("&Transactions"), this);
-    historyAction->setStatusTip(tr("Browse transaction history"));
+    historyAction = new QAction(QIcon(":/icons/history"), tr("&Transakcje"), this);
+    historyAction->setStatusTip(tr("Przeglądaj historię transakcji"));
     historyAction->setToolTip(historyAction->statusTip());
     historyAction->setCheckable(true);
     historyAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_4));
     tabGroup->addAction(historyAction);
 
-    addressBookAction = new QAction(QIcon(":/icons/address-book"), tr("&Addresses"), this);
-    addressBookAction->setStatusTip(tr("Edit the list of stored addresses and labels"));
+    addressBookAction = new QAction(QIcon(":/icons/address-book"), tr("&Portfele PLC"), this);
+    addressBookAction->setStatusTip(tr("Pokaż zapisane adresy PLC wraz z ich etykietami"));
     addressBookAction->setToolTip(addressBookAction->statusTip());
     addressBookAction->setCheckable(true);
     addressBookAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_5));
@@ -207,36 +207,36 @@ void BitcoinGUI::createActions()
     connect(addressBookAction, SIGNAL(triggered()), this, SLOT(showNormalIfMinimized()));
     connect(addressBookAction, SIGNAL(triggered()), this, SLOT(gotoAddressBookPage()));
 
-    quitAction = new QAction(QIcon(":/icons/quit"), tr("E&xit"), this);
+    quitAction = new QAction(QIcon(":/icons/quit"), tr("Wyjdź"), this);
     quitAction->setStatusTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/polcoin"), tr("&About Polcoin"), this);
-    aboutAction->setStatusTip(tr("Show information about Polcoin"));
+    aboutAction = new QAction(QIcon(":/icons/polcoin"), tr("&O Polcoin"), this);
+    aboutAction->setStatusTip(tr("Pokazuje informacje o Polcoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
-    aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
-    aboutQtAction->setStatusTip(tr("Show information about Qt"));
+    aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("O Qt"), this);
+    aboutQtAction->setStatusTip(tr("Pokazuje informacje o Qt"));
     aboutQtAction->setMenuRole(QAction::AboutQtRole);
-    optionsAction = new QAction(QIcon(":/icons/options"), tr("&Options..."), this);
-    optionsAction->setStatusTip(tr("Modify configuration options for Polcoin"));
+    optionsAction = new QAction(QIcon(":/icons/options"), tr("&Opcje"), this);
+    optionsAction->setStatusTip(tr("Modyfikuj opcje klienta Polcoin-qt"));
     optionsAction->setMenuRole(QAction::PreferencesRole);
-    toggleHideAction = new QAction(QIcon(":/icons/polcoin"), tr("&Show / Hide"), this);
-    toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
+    toggleHideAction = new QAction(QIcon(":/icons/polcoin"), tr("Pokaż/Ukryj"), this);
+    toggleHideAction->setStatusTip(tr("Pokaż lub schowaj główne okno"));
 
-    encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Encrypt Wallet..."), this);
-    encryptWalletAction->setStatusTip(tr("Encrypt the private keys that belong to your wallet"));
+    encryptWalletAction = new QAction(QIcon(":/icons/lock_closed"), tr("&Zaszyfruj portfel"), this);
+    encryptWalletAction->setStatusTip(tr("Szyfruje klucze prywatne należące do twojego portfela"));
     encryptWalletAction->setCheckable(true);
-    backupWalletAction = new QAction(QIcon(":/icons/filesave"), tr("&Backup Wallet..."), this);
-    backupWalletAction->setStatusTip(tr("Backup wallet to another location"));
-    changePassphraseAction = new QAction(QIcon(":/icons/key"), tr("&Change Passphrase..."), this);
-    changePassphraseAction->setStatusTip(tr("Change the passphrase used for wallet encryption"));
-    signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Sign &message..."), this);
-    signMessageAction->setStatusTip(tr("Sign messages with your Polcoin addresses to prove you own them"));
-    verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Verify message..."), this);
-    verifyMessageAction->setStatusTip(tr("Verify messages to ensure they were signed with specified Polcoin addresses"));
+    backupWalletAction = new QAction(QIcon(":/icons/filesave"), tr("&Stwórz kopię portfela"), this);
+    backupWalletAction->setStatusTip(tr("Zapisuje kopię bezpieczeństwa pliku wallet.dat"));
+    changePassphraseAction = new QAction(QIcon(":/icons/key"), tr("&Zmień hasło"), this);
+    changePassphraseAction->setStatusTip(tr("Zmienia hasło służące do szyfrowania/deszyfrowania pliku wallet.dat"));
+    signMessageAction = new QAction(QIcon(":/icons/edit"), tr("Podpisz wiadomość"), this);
+    signMessageAction->setStatusTip(tr("Podpisuje wiadomość za pomocą twojego adresu PLC aby potwierdzić jej pochodzenie"));
+    verifyMessageAction = new QAction(QIcon(":/icons/transaction_0"), tr("&Zweryfikuj wiadomość"), this);
+    verifyMessageAction->setStatusTip(tr("Weryfikuje otrzymaną wiadomość pod kątem jej pochodzenia"));
 
-    openRPCConsoleAction = new QAction(QIcon(":/icons/debugwindow"), tr("&Debug window"), this);
-    openRPCConsoleAction->setStatusTip(tr("Open debugging and diagnostic console"));
+    openRPCConsoleAction = new QAction(QIcon(":/icons/debugwindow"), tr("&Okno debugera"), this);
+    openRPCConsoleAction->setStatusTip(tr("Otwiera okno konsoli debugera"));
 
     connect(quitAction, SIGNAL(triggered()), qApp, SLOT(quit()));
     connect(aboutAction, SIGNAL(triggered()), this, SLOT(aboutClicked()));
@@ -261,20 +261,20 @@ void BitcoinGUI::createMenuBar()
 #endif
 
     // Configure the menus
-    QMenu *file = appMenuBar->addMenu(tr("&File"));
+    QMenu *file = appMenuBar->addMenu(tr("&Menu główne"));
     file->addAction(backupWalletAction);
     file->addAction(signMessageAction);
     file->addAction(verifyMessageAction);
     file->addSeparator();
     file->addAction(quitAction);
 
-    QMenu *settings = appMenuBar->addMenu(tr("&Settings"));
+    QMenu *settings = appMenuBar->addMenu(tr("&Ustawienia"));
     settings->addAction(encryptWalletAction);
     settings->addAction(changePassphraseAction);
     settings->addSeparator();
     settings->addAction(optionsAction);
 
-    QMenu *help = appMenuBar->addMenu(tr("&Help"));
+    QMenu *help = appMenuBar->addMenu(tr("&Pomoc"));
     help->addAction(openRPCConsoleAction);
     help->addSeparator();
     help->addAction(aboutAction);
@@ -510,17 +510,17 @@ void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
     enum BlockSource blockSource = clientModel->getBlockSource();
     switch (blockSource) {
         case BLOCK_SOURCE_NETWORK:
-            progressBarLabel->setText(tr("Synchronizing with network..."));
+            progressBarLabel->setText(tr("Trwa synchronizacje z siecią PLC"));
             break;
         case BLOCK_SOURCE_DISK:
-            progressBarLabel->setText(tr("Importing blocks from disk..."));
+            progressBarLabel->setText(tr("Trwa import bloków z dysku twardego"));
             break;
         case BLOCK_SOURCE_REINDEX:
-            progressBarLabel->setText(tr("Reindexing blocks on disk..."));
+            progressBarLabel->setText(tr("Trwa reindeksowanie bloków z dysku twardego"));
             break;
         case BLOCK_SOURCE_NONE:
             // Case: not Importing, not Reindexing and no network connection
-            progressBarLabel->setText(tr("No block source available..."));
+            progressBarLabel->setText(tr("Nie ma dostępnego źródła bloków sieci PLC"));
             break;
     }
 
@@ -532,17 +532,17 @@ void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
 
     if(count < nTotalBlocks)
     {
-        tooltip = tr("Processed %1 of %2 (estimated) blocks of transaction history.").arg(count).arg(nTotalBlocks);
+        tooltip = tr("Przetworzono %1 z %2 (w przybliżeniu) bloków z historii sieci PLC.").arg(count).arg(nTotalBlocks);
     }
     else
     {
-        tooltip = tr("Processed %1 blocks of transaction history.").arg(count);
+        tooltip = tr("Przetworzono %1 bloków z histori sieci PLC.").arg(count);
     }
 
     // Set icon state: spinning if catching up, tick otherwise
     if(secs < 90*60 && count >= nTotalBlocks)
     {
-        tooltip = tr("Up to date") + QString(".<br>") + tooltip;
+        tooltip = tr("Aktualny") + QString(".<br>") + tooltip;
         labelBlocksIcon->setPixmap(QIcon(":/icons/synced").pixmap(STATUSBAR_ICONSIZE, STATUSBAR_ICONSIZE));
 
         walletFrame->showOutOfSyncWarning(false);
@@ -556,24 +556,24 @@ void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
         QString timeBehindText;
         if(secs < 48*60*60)
         {
-            timeBehindText = tr("%n hour(s)","",secs/(60*60));
+            timeBehindText = tr("%n godzin","",secs/(60*60));
         }
         else if(secs < 14*24*60*60)
         {
-            timeBehindText = tr("%n day(s)","",secs/(24*60*60));
+            timeBehindText = tr("%n dni","",secs/(24*60*60));
         }
         else
         {
-            timeBehindText = tr("%n week(s)","",secs/(7*24*60*60));
+            timeBehindText = tr("%n tygodni","",secs/(7*24*60*60));
         }
 
         progressBarLabel->setVisible(true);
-        progressBar->setFormat(tr("%1 behind").arg(timeBehindText));
+        progressBar->setFormat(tr("%1 wstecz").arg(timeBehindText));
         progressBar->setMaximum(1000000000);
         progressBar->setValue(clientModel->getVerificationProgress() * 1000000000.0 + 0.5);
         progressBar->setVisible(true);
 
-        tooltip = tr("Catching up...") + QString("<br>") + tooltip;
+        tooltip = tr("Przetwarzanie ... ") + QString("<br>") + tooltip;
         labelBlocksIcon->setMovie(syncIconMovie);
         if(count != prevBlocks)
             syncIconMovie->jumpToNextFrame();
@@ -582,9 +582,9 @@ void BitcoinGUI::setNumBlocks(int count, int nTotalBlocks)
         walletFrame->showOutOfSyncWarning(true);
 
         tooltip += QString("<br>");
-        tooltip += tr("Last received block was generated %1 ago.").arg(timeBehindText);
+        tooltip += tr("Ostatni odebrany blok został wygenerowany %1 temu.").arg(timeBehindText);
         tooltip += QString("<br>");
-        tooltip += tr("Transactions after this will not yet be visible.");
+        tooltip += tr("Transakcje do tego momentu nie będą widoczne.");
     }
 
     // Don't word-wrap this (fixed-width) tooltip
@@ -606,13 +606,13 @@ void BitcoinGUI::message(const QString &title, const QString &message, unsigned 
     QString msgType;
     switch (style) {
     case CClientUIInterface::MSG_ERROR:
-        msgType = tr("Error");
+        msgType = tr("Błąd");
         break;
     case CClientUIInterface::MSG_WARNING:
-        msgType = tr("Warning");
+        msgType = tr("Ostrzeżenie");
         break;
     case CClientUIInterface::MSG_INFORMATION:
-        msgType = tr("Information");
+        msgType = tr("Informacja");
         break;
     default:
         msgType = title; // Use supplied title
@@ -682,11 +682,11 @@ void BitcoinGUI::closeEvent(QCloseEvent *event)
 
 void BitcoinGUI::askFee(qint64 nFeeRequired, bool *payFee)
 {
-    QString strMessage = tr("This transaction is over the size limit. You can still send it for a fee of %1, "
-        "which goes to the nodes that process your transaction and helps to support the network. "
-        "Do you want to pay the fee?").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::PLC, nFeeRequired));
+    QString strMessage = tr("Transakcja przekracza limit. Możesz w dalszym ciągu wysłać swoją płatność jednak zostanie doliczona prowizja %1, "
+        "która jest przeznaczona na utrzymanie sieci PLC. "
+        "Czy chcesz kontynuować z doliczoną prowizją?").arg(BitcoinUnits::formatWithUnit(BitcoinUnits::PLC, nFeeRequired));
     QMessageBox::StandardButton retval = QMessageBox::question(
-          this, tr("Confirm transaction fee"), strMessage,
+          this, tr("Potwierdź płatność prowizji"), strMessage,
           QMessageBox::Yes|QMessageBox::Cancel, QMessageBox::Yes);
     *payFee = (retval == QMessageBox::Yes);
 }
@@ -694,11 +694,11 @@ void BitcoinGUI::askFee(qint64 nFeeRequired, bool *payFee)
 void BitcoinGUI::incomingTransaction(const QString& date, int unit, qint64 amount, const QString& type, const QString& address)
 {
     // On new transaction, make an info balloon
-    message((amount)<0 ? tr("Sent transaction") : tr("Incoming transaction"),
-             tr("Date: %1\n"
-                "Amount: %2\n"
-                "Type: %3\n"
-                "Address: %4\n")
+    message((amount)<0 ? tr("Wysłane płatności") : tr("Odebrane płatności"),
+             tr("Data: %1\n"
+                "Wartość: %2\n"
+                "Typ: %3\n"
+                "Adres: %4\n")
                   .arg(date)
                   .arg(BitcoinUnits::formatWithUnit(unit, amount, true))
                   .arg(type)
@@ -728,7 +728,7 @@ void BitcoinGUI::dropEvent(QDropEvent *event)
         if (nValidUrisFound)
             walletFrame->gotoSendCoinsPage();
         else
-            message(tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Polcoin address or malformed URI parameters."),
+            message(tr("Przetwarzanie URI"), tr("URI nie może być przetworzony. Przyczyną tego może być błędny adres PLC albo błędne parametry użyte w URI."),
                       CClientUIInterface::ICON_WARNING);
     }
 
@@ -751,7 +751,7 @@ void BitcoinGUI::handleURI(QString strURI)
 {
     // URI has to be valid
     if (!walletFrame->handleURI(strURI))
-        message(tr("URI handling"), tr("URI can not be parsed! This can be caused by an invalid Polcoin address or malformed URI parameters."),
+        message(tr("Przetwarzanie URI"), tr("URI nie może być przetworzony. Przyczyną tego może być błędny adres PLC albo błędne parametry użyte w URI."),
                   CClientUIInterface::ICON_WARNING);
 }
 
@@ -768,7 +768,7 @@ void BitcoinGUI::setEncryptionStatus(int status)
     case WalletModel::Unlocked:
         labelEncryptionIcon->show();
         labelEncryptionIcon->setPixmap(QIcon(":/icons/lock_open").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-        labelEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>unlocked</b>"));
+        labelEncryptionIcon->setToolTip(tr("Portfel jest <b>zaszyfrowany</b> i <b>otwarty</b>"));
         encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);
         encryptWalletAction->setEnabled(false); // TODO: decrypt currently not supported
@@ -776,7 +776,7 @@ void BitcoinGUI::setEncryptionStatus(int status)
     case WalletModel::Locked:
         labelEncryptionIcon->show();
         labelEncryptionIcon->setPixmap(QIcon(":/icons/lock_closed").pixmap(STATUSBAR_ICONSIZE,STATUSBAR_ICONSIZE));
-        labelEncryptionIcon->setToolTip(tr("Wallet is <b>encrypted</b> and currently <b>locked</b>"));
+        labelEncryptionIcon->setToolTip(tr("Portfel jest <b>zaszyfrowany </b> i  <b>zamknięty</b>"));
         encryptWalletAction->setChecked(true);
         changePassphraseAction->setEnabled(true);
         encryptWalletAction->setEnabled(false); // TODO: decrypt currently not supported

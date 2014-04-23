@@ -26,7 +26,7 @@
    <item row="5" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>A&amp;mount:</string>
+      <string>Kwota:</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -39,7 +39,7 @@
    <item row="3" column="0">
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>Pay &amp;To:</string>
+      <string>Prześlij PLC pod adres:</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -55,7 +55,7 @@
    <item row="4" column="0">
     <widget class="QLabel" name="label_4">
      <property name="text">
-      <string>&amp;Label:</string>
+      <string>Opis transakcji:</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -142,7 +142,7 @@
  <customwidgets>
   <customwidget>
    <class>BitcoinAmountField</class>
-   <extends>QLineEdit</extends>
+   <extends>QSpinBox</extends>
    <header>bitcoinamountfield.h</header>
    <container>1</container>
   </customwidget>

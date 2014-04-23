@@ -54,7 +54,7 @@
                </font>
               </property>
               <property name="text">
-               <string>Wallet</string>
+               <string>Portfel</string>
               </property>
              </widget>
             </item>
@@ -67,7 +67,7 @@
                <string notr="true">QLabel { color: red; }</string>
               </property>
               <property name="text">
-               <string notr="true">(out of sync)</string>
+               <string notr="true">(desynchronizacja)</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -103,7 +103,7 @@
             <item row="0" column="0">
              <widget class="QLabel" name="label">
               <property name="text">
-               <string>Balance:</string>
+               <string>Saldo</string>
               </property>
              </widget>
             </item>
@@ -132,7 +132,7 @@
             <item row="1" column="0">
              <widget class="QLabel" name="label_3">
               <property name="text">
-               <string>Unconfirmed:</string>
+               <string>Niepotwierdzone</string>
               </property>
              </widget>
             </item>
@@ -149,32 +149,6 @@
               </property>
               <property name="toolTip">
                <string>Total of transactions that have yet to be confirmed, and do not yet count toward the current balance</string>
-              </property>
-              <property name="text">
-               <string notr="true">0 PLC</string>
-              </property>
-              <property name="textInteractionFlags">
-               <set>Qt::LinksAccessibleByMouse|Qt::TextSelectableByKeyboard|Qt::TextSelectableByMouse</set>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <widget class="QLabel" name="labelImmatureText">
-              <property name="text">
-               <string>Immature:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QLabel" name="labelImmature">
-              <property name="font">
-               <font>
-                <weight>75</weight>
-                <bold>true</bold>
-               </font>
-              </property>
-              <property name="toolTip">
-               <string>Mined balance that has not yet matured</string>
               </property>
               <property name="text">
                <string notr="true">0 PLC</string>
@@ -220,7 +194,7 @@
             <item>
              <widget class="QLabel" name="label_4">
               <property name="text">
-               <string>&lt;b&gt;Recent transactions&lt;/b&gt;</string>
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Ostatnie transakcje&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
               </property>
              </widget>
             </item>
@@ -233,7 +207,7 @@
                <string notr="true">QLabel { color: red; }</string>
               </property>
               <property name="text">
-               <string notr="true">(out of sync)</string>
+               <string notr="true">(desynchronizacja)</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

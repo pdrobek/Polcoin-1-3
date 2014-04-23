@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>760</width>
+    <width>934</width>
     <height>380</height>
    </rect>
   </property>
@@ -60,7 +60,7 @@
         <string>Create a new address</string>
        </property>
        <property name="text">
-        <string>&amp;New Address</string>
+        <string>&amp;Nowy Adres</string>
        </property>
        <property name="icon">
         <iconset resource="../bitcoin.qrc">
@@ -74,7 +74,7 @@
         <string>Copy the currently selected address to the system clipboard</string>
        </property>
        <property name="text">
-        <string>&amp;Copy Address</string>
+        <string>&amp;Skopiuj Adres</string>
        </property>
        <property name="icon">
         <iconset resource="../bitcoin.qrc">
@@ -85,7 +85,7 @@
      <item>
       <widget class="QPushButton" name="showQRCode">
        <property name="text">
-        <string>Show &amp;QR Code</string>
+        <string>Pokaż kod &amp;QR</string>
        </property>
        <property name="icon">
         <iconset resource="../bitcoin.qrc">
@@ -99,7 +99,7 @@
         <string>Sign a message to prove you own a Bitcoin address</string>
        </property>
        <property name="text">
-        <string>Sign &amp;Message</string>
+        <string>Podpisz &amp;Wiadomość</string>
        </property>
        <property name="icon">
         <iconset resource="../bitcoin.qrc">
@@ -113,25 +113,11 @@
         <string>Verify a message to ensure it was signed with a specified Bitcoin address</string>
        </property>
        <property name="text">
-        <string>&amp;Verify Message</string>
+        <string>&amp;Sprawdź wiadomość</string>
        </property>
        <property name="icon">
         <iconset resource="../bitcoin.qrc">
          <normaloff>:/icons/transaction_0</normaloff>:/icons/transaction_0</iconset>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="deleteAddress">
-       <property name="toolTip">
-        <string>Delete the currently selected address from the list</string>
-       </property>
-       <property name="text">
-        <string>&amp;Delete</string>
-       </property>
-       <property name="icon">
-        <iconset resource="../bitcoin.qrc">
-         <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
        </property>
       </widget>
      </item>
@@ -149,12 +135,26 @@
       </spacer>
      </item>
      <item>
+      <widget class="QPushButton" name="deleteAddress">
+       <property name="toolTip">
+        <string>Delete the currently selected address from the list</string>
+       </property>
+       <property name="text">
+        <string>&amp;Usuń</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../bitcoin.qrc">
+         <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
+       </property>
+      </widget>
+     </item>
+     <item>
       <widget class="QPushButton" name="exportButton">
        <property name="toolTip">
         <string>Export the data in the current tab to a file</string>
        </property>
        <property name="text">
-        <string>&amp;Export</string>
+        <string>&amp;Eksport</string>
        </property>
        <property name="icon">
         <iconset resource="../bitcoin.qrc">

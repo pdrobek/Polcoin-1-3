@@ -139,13 +139,9 @@ void OverviewPage::setBalance(qint64 balance, qint64 unconfirmedBalance, qint64 
     currentImmatureBalance = immatureBalance;
     ui->labelBalance->setText(BitcoinUnits::formatWithUnit(unit, balance));
     ui->labelUnconfirmed->setText(BitcoinUnits::formatWithUnit(unit, unconfirmedBalance));
-    ui->labelImmature->setText(BitcoinUnits::formatWithUnit(unit, immatureBalance));
 
     // only show immature (newly mined) balance if it's non-zero, so as not to complicate things
     // for the non-mining users
-    bool showImmature = immatureBalance != 0;
-    ui->labelImmature->setVisible(showImmature);
-    ui->labelImmatureText->setVisible(showImmature);
 }
 
 void OverviewPage::setClientModel(ClientModel *model)

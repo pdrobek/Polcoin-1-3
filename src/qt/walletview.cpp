@@ -39,8 +39,8 @@ WalletView::WalletView(QWidget *parent, BitcoinGUI *_gui):
     QHBoxLayout *hbox_buttons = new QHBoxLayout();
     transactionView = new TransactionView(this);
     vbox->addWidget(transactionView);
-    QPushButton *exportButton = new QPushButton(tr("&Export"), this);
-    exportButton->setToolTip(tr("Export the data in the current tab to a file"));
+    QPushButton *exportButton = new QPushButton(tr("Eksportuj transakcje"), this);
+    exportButton->setToolTip(tr("Umożliwia zapisanie historii transakcji do pliku"));
 #ifndef Q_OS_MAC // Icons on push buttons are very uncommon on Mac
     exportButton->setIcon(QIcon(":/icons/export"));
 #endif
@@ -234,14 +234,14 @@ void WalletView::encryptWallet(bool status)
 void WalletView::backupWallet()
 {
     QString saveDir = QDesktopServices::storageLocation(QDesktopServices::DocumentsLocation);
-    QString filename = QFileDialog::getSaveFileName(this, tr("Backup Wallet"), saveDir, tr("Wallet Data (*.dat)"));
+    QString filename = QFileDialog::getSaveFileName(this, tr("Kopia bezpieczeństwa portfela PLc"), saveDir, tr("Dane portfela (*.dat)"));
     if (!filename.isEmpty()) {
         if (!walletModel->backupWallet(filename)) {
-            gui->message(tr("Backup Failed"), tr("There was an error trying to save the wallet data to the new location."),
+            gui->message(tr("Kopia portfela PLC - niepowodzenie"), tr("Wystąpił nieoczekiwany błąd w trakcie tworzenia kopii bezpieczeństwa portfela PLC."),
                       CClientUIInterface::MSG_ERROR);
         }
         else
-            gui->message(tr("Backup Successful"), tr("The wallet data was successfully saved to the new location."),
+            gui->message(tr("Kopia portfela PLC - sukces"), tr("Kopia portfela PLC został z powodzeniem zapisana w nowej lokalizacji."),
                       CClientUIInterface::MSG_INFORMATION);
     }
 }
