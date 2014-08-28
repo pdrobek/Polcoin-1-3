@@ -8,18 +8,17 @@ DEFINES += QT_GUI BOOST_THREAD_USE_LIB BOOST_SPIRIT_THREADSAFE
 CONFIG += no_include_pwd
 CONFIG += thread
 CONFIG += static
-
-BOOST_LIB_SUFFIX=-mgw48-mt-s-1_55
-BOOST_INCLUDE_PATH=C:/temp/boost_1_55_0
-BOOST_LIB_PATH=C:/temp/boost_1_55_0/stage/lib
-BDB_INCLUDE_PATH=C:/temp/db-4.8.30.NC/build_unix
-BDB_LIB_PATH=C:/temp/db-4.8.30.NC/build_unix
-OPENSSL_INCLUDE_PATH=C:/temp/openssl-1.0.1g/include
-OPENSSL_LIB_PATH=C:/temp/openssl-1.0.1g
-MINIUPNPC_INCLUDE_PATH=C:/temp/
-MINIUPNPC_LIB_PATH=C:/temp/miniupnpc
-QRENCODE_INCLUDE_PATH=C:/temp/qrencode-3.4.3
-QRENCODE_LIB_PATH=C:/temp/qrencode-3.4.3/.libs
+#BOOST_LIB_SUFFIX=-mgw48-mt-s-1_55
+#BOOST_INCLUDE_PATH=C:/temp/boost_1_55_0
+#BOOST_LIB_PATH=C:/temp/boost_1_55_0/stage/lib
+#BDB_INCLUDE_PATH=C:/temp/db-4.8.30.NC/build_unix
+#BDB_LIB_PATH=C:/temp/db-4.8.30.NC/build_unix
+#OPENSSL_INCLUDE_PATH=C:/temp/openssl-1.0.1g/include
+#OPENSSL_LIB_PATH=C:/temp/openssl-1.0.1g
+#MINIUPNPC_INCLUDE_PATH=C:/temp/
+#MINIUPNPC_LIB_PATH=C:/temp/miniupnpc
+#QRENCODE_INCLUDE_PATH=C:/temp/qrencode-3.4.3
+#QRENCODE_LIB_PATH=C:/temp/qrencode-3.4.3/.libs
 
 # for boost 1.37, add -mt to the boost libraries
 # use: qmake BOOST_LIB_SUFFIX=-mt
